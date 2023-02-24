@@ -241,6 +241,29 @@ nav .background_nav{
     
     /*---------*/
 
+    /* Contador */
+
+    .countdown{
+        margin-top: 6rem;
+    }
+
+    .time {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 15px;
+    }
+    
+    .time h2 {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 1;
+        margin: 0 0 5px;
+    }
+    
+    /*--------*/
+
     /* wave deformation*/
     .nav-wave{
         position: absolute;
@@ -657,6 +680,12 @@ nav .background_nav{
         transform: translateY(-10rem);
         text-align: justify;
     }
+
+        /* Contador */
+
+        .countdown{
+            margin-top: 15.5rem;
+        }
 
     .about .modal_about::-webkit-scrollbar{
         background-color: #0359a900;

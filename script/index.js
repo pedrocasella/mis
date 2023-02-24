@@ -7,6 +7,7 @@ document.querySelector('.blob-btn').addEventListener('click', ()=>{
 const prefersColorScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
 if(prefersColorScheme.matches){
+    document.querySelector("link[rel='icon']").href = './icon/whitemis00354.png'
     document.querySelector('body').style.backgroundColor = '#202124'
     document.querySelector('.aic_title').style.color = '#fff'
     document.querySelector('.nav-wave').innerHTML = '<path fill="#202124" fill-opacity="1" d="M0,128L80,160C160,192,320,256,480,240C640,224,800,128,960,101.3C1120,75,1280,117,1360,138.7L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>'
@@ -26,7 +27,7 @@ if(prefersColorScheme.matches){
     document.querySelector('.journal_2021').style.backgroundImage = 'url(./../icon/journal_icon_white.png)'
     document.querySelector('.button').style.borderColor = '#fff'
 }else{
-
+    document.querySelector("link[rel='icon']").href = './icon/blackmis00354.png'
 }
 
 //Nav bar
@@ -85,3 +86,31 @@ document.getElementById('uk').addEventListener('mouseover', ()=>{
     document.getElementById('title').innerText = 'UK Parliament'
     document.getElementById('resume').innerText = ''
 })
+
+//Contador
+    const days = document.getElementById('days');
+    const hours = document.getElementById('hours');
+    const minutes = document.getElementById('minutes');
+    const seconds = document.getElementById('seconds');
+
+    const currentYear = new Date().getFullYear();
+
+    const newYearTime = new Date(`March 03 ${currentYear} 00:00:00`);
+
+    // Update countdown time
+    function updateCountdown() {
+        const currentTime = new Date();
+        const diff = newYearTime - currentTime;
+
+        const d = Math.floor(diff / 1000 / 60 / 60 / 24);
+        const h = Math.floor(diff / 1000 / 60 / 60) % 24;
+        const m = Math.floor(diff / 1000 / 60) % 60;
+        const s = Math.floor(diff / 1000) % 60;
+
+        days.innerHTML = d;
+        hours.innerHTML = h < 10 ? '0' + h : h;
+        minutes.innerHTML = m < 10 ? '0' + m : m;
+        seconds.innerHTML = s < 10 ? '0' + s : s;
+    }
+
+    setInterval(updateCountdown, 1000);
