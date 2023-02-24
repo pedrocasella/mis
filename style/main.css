@@ -334,6 +334,7 @@ nav .background_nav{
         z-index: 3;
         margin-top: 12.5rem;
         display: inline-flex;
+        flex-wrap: wrap;
         left: 18%;
     }
 
@@ -594,7 +595,33 @@ nav .background_nav{
 
 
 /*Cellphone*/
-@media screen and (max-width: 912px){
+@media screen and (max-width: 1060px){
+        /* List */
+        .comite .comites_ul{
+            position: absolute;
+            list-style: none;
+            z-index: 3;
+            margin-top: 15rem;
+            display: inline-flex;
+            left: 25%;
+            flex-wrap: wrap;
+        }
+
+        .comite .comites_ul li{
+            margin: 1rem;
+        }
+
+        .comite .comites_ul li div{
+            width: 80px;
+            height: 80px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        
+        }
+}
+
+@media screen and (max-width: 968px){
     /*background */
     nav .background_nav{
         width: 100%;
