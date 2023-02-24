@@ -1,0 +1,829 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Animations */
+
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/*-----------*/
+
+body{
+    background-color: #fff;
+}
+
+/* Navigation */
+
+.navigation{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: #035aa9;
+    z-index: 10;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32);
+    display: none;
+    animation: opacity .5s ease-in;
+}
+
+.navigation .logo{
+    width: 80px;
+    height: 50px;
+    background-image: url(./../icon/Logo\ MIS.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 98%;
+    margin-top: 1.2rem;
+    margin-left: 1rem;
+}
+
+/* Nav bar*/
+
+nav{
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background-color: #035aa9;
+    z-index: -1;
+    color: #fff;
+}
+
+nav .background_nav{
+    width: 100%;
+    height: 590px;
+    opacity: .2;
+    filter: blur(2px);
+    background-color: #035aa9;
+    top: 0;
+    position: absolute;
+    background-image: url(./../img/projetomis-20230130-0066.jpg);
+    background-position-y: -12rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    /* X X X */
+    nav .x_detail{
+        margin-top: 2rem;
+        right: 10%;
+        position: absolute;
+        display: inline-flex;
+        list-style: none;
+    }
+
+    nav .x_detail li span{
+        width: 10px;
+        height: 10px;
+        padding: 10px;
+        background-image: url(./../icon/x.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 95%;
+    }
+    /*-----------------*/
+    /* Logo and Title */    
+    nav .logo{
+        width: 100px;
+        height: 50px;
+        background-image: url(./../icon/Logo\ MIS.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 98%;
+        transform: translate(30px, 100px);
+    }
+
+    nav .title_ul{
+        position: absolute;
+        z-index: 2;
+        list-style: none;
+        margin: 6rem 2.5rem 2.5rem 3rem;
+    }
+
+    nav .title_ul li{
+        margin-top: .5rem;
+    }
+
+    nav .title_ul .title{
+        font-size: 20pt;
+    }
+
+    nav .title_ul .subtitle{
+        font-size: 15pt;
+    }
+    /*------------------*/
+
+    /*Insta Btn*/
+    .insta_btn{
+        position: absolute;
+        right: 5%;
+    }
+
+    *, *:before, *:after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+   }
+    .buttons {
+        width: 200px;
+        margin-top: 15px;
+        border-radius: 0px;
+        
+        overflow-x: hidden;
+   }
+    .blob-btn {
+        z-index: 1;
+        position: relative;
+        padding: 10px 40px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: bold;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        transition: color 0.5s;
+        cursor: pointer;
+        border-radius: 30px;
+   }
+    .blob-btn:before {
+        content: "";
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #fff;
+        border-radius: 30px;
+   }
+    .blob-btn:after {
+        content: "";
+        z-index: -2;
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s 0.2s;
+        border-radius: 30px;
+   }
+    .blob-btn:hover {
+        color: #035aa9;
+        border-radius: 30px;
+   }
+    .blob-btn:hover:after {
+        transition: all 0.3s;
+        left: 0;
+        top: 0;
+        border-radius: 30px;
+   }
+    .blob-btn__inner {
+        z-index: -1;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background: #00000000;
+   }
+    .blob-btn__blobs {
+        position: relative;
+        display: block;
+        height: 100%;
+        filter: url('#goo');
+   }
+    .blob-btn__blob {
+        position: absolute;
+        top: 2px;
+        width: 25%;
+        height: 100%;
+        background: #fff;
+        border-radius: 100%;
+        transform: translate3d(0, 150%, 0) scale(1.7);
+        transition: transform 0.45s;
+    }
+        @supports (filter: url('#goo')) {
+            transform: translate3d(0, 150%, 0) scale(1.4);
+    }
+        .blob-btn__blob:nth-child(1) {
+            left: 0%;
+            transition-delay: 0s;
+    }
+        .blob-btn__blob:nth-child(2) {
+            left: 30%;
+            transition-delay: 0.08s;
+    }
+        .blob-btn__blob:nth-child(3) {
+            left: 60%;
+            transition-delay: 0.16s;
+    }
+        .blob-btn__blob:nth-child(4) {
+            left: 90%;
+            transition-delay: 0.24s;
+    }
+        .blob-btn:hover .blob-btn__blob {
+            transform: translateZ(0) scale(1.7);
+    }
+        @supports (filter: url('#goo')) {
+            transform: translateZ(0) scale(1.4);
+    }
+    
+    /*---------*/
+
+    /* wave deformation*/
+    .nav-wave{
+        position: absolute;
+        bottom: 0;
+    }
+    /*--------------*/
+/*-------------*/
+
+/*about*/
+.about{
+    top: 600px;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+
+}
+
+.about .modal_about{
+    padding: 2rem;
+    width: 80%;
+    height: auto;
+    border-radius: 30px;
+    background-color: #fff;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.31); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.31);
+    transform: translateY(-10rem);
+    text-align: justify;
+}
+
+.about .modal_about h2{
+    color: #035aa9;
+    margin-bottom: 1rem;
+}
+
+.about .modal_about span{
+    color: #54595F;
+}
+/*------*/
+
+/*paper wave*/
+.paper_wave{
+    position: absolute;
+    top: 800px;
+    width: 100%;
+    height: 300px;
+    background-image: url(./../img/paperwave.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+}
+/*----------*/
+
+/* Comites */
+.background_comite{
+    position: absolute;
+    top: 800px;
+    width: 100%;
+    height: 790px;
+    background-image: url(./../img/Cap2_5768.webp);
+    background-position-y: 5.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    opacity: .1;
+    filter: blur(2px);
+}
+
+.comite{
+    position: absolute;
+    top: 800px;
+    width: 100%;
+    height: 800px;
+    background-color: #035aa9;
+}
+
+.comite h1{
+    position: absolute;
+    z-index: 2;
+    margin-top: 9.3rem;
+    margin-left: 40%;
+    font-size: 40pt;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.72);
+}
+
+    /* List */
+    .comite .comites_ul{
+        position: absolute;
+        list-style: none;
+        z-index: 3;
+        margin-top: 12.5rem;
+        display: inline-flex;
+        left: 18%;
+    }
+
+    .comite .comites_ul li{
+        margin: 2rem;
+    }
+
+    .comite .comites_ul li div{
+        width: 150px;
+        height: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+    }
+
+    .comite .comites_ul li div:hover{
+        transition: linear .3s;
+        cursor: pointer;
+        transform: scale(105%);
+    }
+
+    .comite .comites_ul li .shield{
+        background-image: url(./../icon/shield.png);
+    }
+
+    .comite .comites_ul li .icj{
+        background-image: url(./../icon/icj.png);
+    }
+
+    .comite .comites_ul li .oas{
+        background-image: url(./../icon/oas.png);
+    }
+
+    .comite .comites_ul li .uk{
+        background-image: url(./../icon/ukparliament.png);
+    }
+    
+    /*Comite Card */
+    .comite .comite_card{
+        position: absolute;
+        margin-top: 26rem;
+        width: 80%;
+        height: 500px;
+        z-index: 3;
+        background-color: #fff;
+        left: 11%;
+        border-radius: 30px;
+    }
+
+    .comite .comite_card .picture{
+        position: absolute;
+        width: 35%;
+        height: 100%;
+        background-color: #020202;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        background-image: url(./../img/Cap2_5768.webp);
+        background-position-x: 28%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .comite .comite_card .text{
+        position: absolute;
+        right: 0;
+        width: 65%;
+        text-align: justify;
+        padding: 2rem;
+    }
+
+    .comite .comite_card .text h2{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .comite .comite_card .text .resume{
+        margin-top: 2rem;
+        color: #54595F;
+    }
+
+/*----------*/
+
+.insc-wave{
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+/* Imprensa */
+
+.imprensa{
+    position: absolute;
+    top: 1800px;
+    width: 100%;
+}
+
+.imprensa h1{
+    font-size: 40pt;
+    margin: 2rem;
+    color: #035aa9;
+}
+
+.imprensa .text_aic{
+    position: absolute;
+    width: 60%;
+    left: 0;
+    padding: 2rem;
+    text-align: justify;
+    color: #54595F;
+}
+
+.imprensa .text_aic h2{
+    color: #020202;
+    margin-bottom: 2rem;
+}
+
+.imprensa .picture_aic{
+    position: absolute;
+    right: 0;
+    width: 40%;
+    height: 400px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #020202;
+    background-image: url(./../img/0001.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imprensa .background_aic{
+    position: absolute;
+    right: 0;
+    width: 40%;
+    height: 400px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #020202;
+    background-image: url(./../img/Logo\ AIC.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+    opacity: .5;
+}
+
+.imprensa .journals{
+    position: absolute;
+    list-style: none;
+    margin: 4rem;
+    display: inline-flex;
+    left: 0;
+}
+
+.imprensa .journals li{
+    margin: 1rem;
+    color: #035aa9;
+}
+
+.imprensa .journals li a .journal_2021{
+    width: 60px;
+    height: 60px;
+    background-image: url(./../icon/journal_icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 95%;
+    margin-bottom: .5rem;
+    margin-left: 8px;
+}
+
+.imprensa .journals li a span{
+    width: 60px;
+    flex-wrap: wrap;
+    font-size: 11pt;
+    text-align: center;
+    margin: .2rem;
+    color: #035aa9;
+}
+
+.imprensa .journals li a .journal_2021:hover{
+    transition: linear .3s;
+    transform: scale(105%);
+}
+
+/*------*/
+
+/* Inscrições */
+
+.inscricoes{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 2500px;
+}
+
+.inscricoes h1{
+    font-size: 40pt;
+    margin: 2rem;
+    color: #035aa9;
+}
+
+    /* Insc Btn*/
+    a{
+        text-decoration: none;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 0.75rem 1.25rem;
+        border-radius: 10rem;
+        color: #035aa9;
+        font-weight: bolder;
+        font-size: 1rem;
+        letter-spacing: 0.15rem;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        border-style: solid;
+        border-color: #020202;
+        border-width: 2px;
+    }
+    .button:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 204, 255, 0);
+        border-radius: 10rem;
+        z-index: -2;
+    }
+    .button:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: #035aa9;
+        color: #fff;
+        transition: all 0.3s;
+        border-radius: 10rem;
+        z-index: -1;
+    }
+    .button:hover {
+        color: #fff;
+    }
+    .button:hover:before {
+        width: 100%;
+    }
+    /*----------*/
+
+
+
+
+
+/*Cellphone*/
+@media screen and (max-width: 912px){
+    /*background */
+    nav .background_nav{
+        width: 100%;
+        height: 590px;
+        opacity: .2;
+        filter: blur(2px);
+        background-color: #035aa9;
+        top: 0;
+        position: absolute;
+        background-image: url(./../img/projetomis-20230130-0066.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /*Insta Btn*/
+    .insta_btn{
+        position: absolute;
+        left: 15%;
+        top: 38%;
+    }
+
+    /* Modal About */
+    .about .modal_about{
+        padding: 2rem;
+        width: 80%;
+        height: 300px;
+        overflow-y: scroll;
+        border-radius: 30px;
+        background-color: #fff;
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.31); 
+        box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.31);
+        transform: translateY(-10rem);
+        text-align: justify;
+    }
+
+    .about .modal_about::-webkit-scrollbar{
+        background-color: #0359a900;
+    }
+
+    /*Title comites*/
+    .comite h1{
+        position: absolute;
+        z-index: 2;
+        margin-top: 8.2rem;
+        margin-left: 30%;
+        font-size: 30pt;
+    }
+
+        /* List */
+        .comite .comites_ul{
+            position: absolute;
+            list-style: none;
+            z-index: 3;
+            margin-top: 12rem;
+            display: inline-flex;
+            left: 15%;
+            flex-wrap: wrap;
+        }
+
+        .comite .comites_ul li{
+            margin: 1rem;
+        }
+
+        .comite .comites_ul li div{
+            width: 100px;
+            height: 100px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        
+        }
+        
+        /*Comite Card */
+        .comite .comite_card{
+            position: absolute;
+            margin-top: 29rem;
+            width: 80%;
+            height: 500px;
+            z-index: 3;
+            background-color: #fff;
+            left: 11%;
+            border-radius: 30px;
+        }
+
+        .comite .comite_card .picture{
+            width: 100%;
+            height: 35%;
+            border-radius: 30px;
+            background-image: url(./../img/Cap2_5768.webp);
+            background-position-x: 15%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .comite .comite_card .text{
+            position: absolute;
+            top: 35%;
+            width: 100%;
+            height: 65%;
+            text-align: justify;
+            padding: 2rem;
+            overflow-y: scroll;
+        }
+
+        .comite .comite_card .text h2{
+            margin-top: 0rem;
+            margin-bottom: 2rem;
+        }
+
+        .comite .comite_card .text .resume{
+            margin-top: 2rem;
+            height: 200px;
+
+        }
+
+        /* Imprensa */
+
+        .imprensa{
+            position: absolute;
+            top: 1780px;
+            width: 100%;
+        }
+
+        .imprensa h1{
+            font-size: 30pt;
+            margin: 2rem;
+            color: #035aa9;
+        }
+
+        .imprensa .text_aic{
+            position: absolute;
+            width: 100%;
+            margin-top: 12rem;
+            left: 0;
+            padding: 2rem;
+            text-align: justify;
+            color: #54595F;
+        }
+
+        .imprensa .text_aic h2{
+            color: #020202;
+            margin-bottom: 2rem;
+        }
+
+        .imprensa .picture_aic{
+            position: absolute;
+            right: 0;
+            width: 100%;
+            height: 200px;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            background-color: #020202;
+            background-image: url(./../img/0001.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .imprensa .background_aic{
+            position: absolute;
+            right: 0;
+            width: 100%;
+            height: 200px;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            background-color: #020202;
+            background-image: url(./../img/Logo\ AIC.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 75%;
+            z-index: 2;
+            opacity: .5;
+        }
+
+        .imprensa .journals{
+            position: absolute;
+            list-style: none;
+            margin: 4rem;
+            display: inline-flex;
+            left: 0;
+        }
+
+        .imprensa .journals li{
+            margin: 1rem;
+            color: #035aa9;
+        }
+
+        .imprensa .journals li a .journal_2021{
+            width: 60px;
+            height: 60px;
+            background-image: url(./../icon/journal_icon.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 95%;
+            margin-bottom: .5rem;
+            margin-left: 8px;
+        }
+
+        .imprensa .journals li a span{
+            width: 60px;
+            flex-wrap: wrap;
+            font-size: 11pt;
+            text-align: center;
+            margin: .2rem;
+            color: #035aa9;
+        }
+
+        .imprensa .journals li a .journal_2021:hover{
+            transition: linear .3s;
+            transform: scale(105%);
+        }
+
+        /*------*/
+
+
+        /* Inscrições */
+
+        .inscricoes{
+            position: absolute;
+            width: 100%;
+            height: 300px;
+            top: 2650px;
+        }
+
+        .inscricoes h1{
+            font-size: 40pt;
+            margin: 2rem;
+            color: #035aa9;
+        }
+
+}
