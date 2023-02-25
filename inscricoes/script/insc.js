@@ -33,7 +33,7 @@ const dataInsc = new Date()
 const atualDay = dataInsc.getDate()
 const atualMonth = dataInsc.getMonth() + 1
 const month = '0' + atualMonth
-const numberDate = 303//parseInt(atualDay + month)
+const numberDate = 303 //parseInt(atualDay + month)
 if(numberDate < 303 || numberDate > 1003){
     document.getElementById('await').style.display = 'block'
     document.getElementById('insc').style.display = 'none'
@@ -102,7 +102,7 @@ document.getElementById('submit_btn').addEventListener('click', ()=>{
             body: JSON.stringify(resp)
         }).then((result)=>{
             if(result.status == 200){
-                window.location.reload()
+                document.getElementById('sucess').style.display = 'block'
             }else{
                 window.alert('Sua Inscrição não foi realizada. Tente novamente!')
             }

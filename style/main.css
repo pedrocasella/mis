@@ -30,7 +30,7 @@ body{
     z-index: 10;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32); 
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32);
-    display: none;
+    display: block;
     animation: opacity .5s ease-in;
 }
 
