@@ -45,7 +45,65 @@
     }
     
     /*--------*/
+/* Forms */
+.title{
+    width: 50%;
+    height: auto;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
 
+.title h1{
+    color: #035aa9;
+    float: left;
+}
+
+.insc .forms{
+    width: 50%;
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.insc .forms li span{
+    font-size: 10pt;
+    font-weight: bolder;
+    float: left;
+}
+
+.insc .forms li{
+    margin: 1rem .5rem 1rem .5rem;
+}
+
+.insc .forms li input{
+    padding: .5rem;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.insc .forms li select{
+    padding: .5rem;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.insc .submit_btn{
+    width: 100px;
+    padding: 1rem;
+    background-color: #035aa9;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.insc .submit_btn:hover{
+    cursor: pointer;
+    transition: linear .3s;
+    background-color: #136ec4;
+}
+/*-------*/
 
 @media screen and (max-width: 912px){
     .await{

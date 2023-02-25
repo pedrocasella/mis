@@ -33,7 +33,7 @@ const dataInsc = new Date()
 const atualDay = dataInsc.getDate()
 const atualMonth = dataInsc.getMonth() + 1
 const month = '0' + atualMonth
-const numberDate = parseInt(atualDay + month)
+const numberDate = 303//parseInt(atualDay + month)
 if(numberDate < 303 || numberDate > 1003){
     document.getElementById('await').style.display = 'block'
     document.getElementById('insc').style.display = 'none'
@@ -46,3 +46,46 @@ const dataString = numberDate.toString()
 if(dataString.indexOf('03') == -1 && dataString.indexOf('02') == -1){
     document.getElementById('await').style.display = 'none'
 }
+
+//submit insc
+
+document.getElementById('submit_btn').addEventListener('click', ()=>{
+    const name = document.getElementById('name').value
+    const matricula = document.getElementById('matricula').value
+    const turma = document.getElementById('turma').value
+    const opt1 = document.getElementById('comite').value
+    const opt2 = document.getElementById('comite_two').value
+    const materia = document.getElementById('materia').value
+    const cellphone = document.getElementById('contact').value
+    const unidade = document.getElementById('local').value
+
+    const resp = {
+        'N° Matrícula': matricula,
+        Nome: name,
+        Turma: turma,
+        'Comitê de Preferência': opt1,
+        '2° Opção': opt2,
+        Matéria: materia,
+        Whatsapp: cellphone,
+        Unidade: unidade,
+    }
+    if(name == '' || matricula == '' || turma == 'null' || opt1 == 'null' || opt2 == 'null' || materia == 'null' || cellphone == '' || unidade == 'null'){
+        window.alert('Verifique se você deixou algum campo em branco e tente novamente!')
+    }else{
+        fetch('https://api.sheetmonkey.io/form/nv8ARZsDNUpHMyVVHM5SEg', {
+            method: 'post',
+            headers: {
+                'Accept' : 'application/json',
+                'Content-Type' : 'application/json'
+            },
+            body: JSON.stringify(resp)
+        }).then((result)=>{
+            if(result.status == 200){
+                window.location.reload()
+            }else{
+                window.alert('Sua Inscrição não foi realizada. Tente novamente!')
+            }
+        })
+    }
+
+})

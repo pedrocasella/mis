@@ -40,40 +40,77 @@
     <!------------------>
     </section>
     <section class="insc" id="insc">
-        <ul class="forms">
-            <li><input type="text" name="name" placeholder="Nome Completo" id="name" class="name"></li>
-            <li><input type="text" name="matricula" placeholder="Matrícula" id="matricula" class="matricula"></li>
-            <li>
-                <select name="turma" id="turma" class="turma">
-                    <option value="null">Turma</option>
-                    <option value="1° AM">1° AM</option>
-                    <option value="1° BM">1° BM</option>
-                    <option value="1° AT">1° AT</option>
-                    <option value="2° AM">2° AM</option>
-                    <option value="2° BM">2° BM</option>
-                    <option value="2° CM">2° CM</option>
-                    <option value="2° AT">2° AT</option>
-                    <option value="3° Ano">3° Ano</option>
-                </select>
-            </li>
-            <li>
-                <select name="comite" id="comite" class="comite">
-                    <option value="null">Comitê</option>
-                    <option value="CSM/Wakanda">Conselho de Segurança Mundial</option>
-                    <option value="ICJ">Corte Internacional de Justiça</option>
-                    <option value="OEA">Organização dos Estados Americanos</option>
-                    <option value="UK Parliament">UK Parliament</option>
-                </select>
-            </li>
-            <li><input type="tel" name="cellphone" placeholder="Celular" id="contact" class="contact"></li>
-            <li>
-                <select name="local" id="local" class="local">
-                    <option value="null">Unidade</option>
-                    <option value="Taquara">Unidade Taquara</option>
-                    <option value="Recreio">Unidade Recreio</option>
-                </select>
-            </li>
-        </ul>
+        <center>
+            <div class="title">
+                <h1>Inscrição - MIS | 2023 4° Edição</h1>
+             </div>
+            <ul class="forms">
+                <li><span>Nome Completo:</span><br><input type="text" name="name" placeholder="Nome Completo" id="name" class="name"></li>
+                <li><span>N° Matrícula:</span><br><input type="text" name="matricula" placeholder="Matrícula" id="matricula" class="matricula"></li>
+                <li>
+                    <span>Turma:</span><br>
+                    <select name="turma" id="turma" class="turma">
+                        <option value="null">Turma</option>
+                        <option value="1° AM">1° AM</option>
+                        <option value="1° BM">1° BM</option>
+                        <option value="1° AT">1° AT</option>
+                        <option value="2° AM">2° AM</option>
+                        <option value="2° BM">2° BM</option>
+                        <option value="2° CM">2° CM</option>
+                        <option value="2° AT">2° AT</option>
+                        <option value="3° Ano">3° Ano</option>
+                    </select>
+                </li>
+                <li>
+                    <span>Comitê de Preferência:</span><br>
+                    <select name="comite" id="comite" class="comite">
+                        <option value="null">Comitê 1° Opção</option>
+                        <option value="CSM/Wakanda">Conselho de Segurança Mundial</option>
+                        <option value="ICJ">Corte Internacional de Justiça</option>
+                        <option value="OEA">Organização dos Estados Americanos</option>
+                        <option value="UK Parliament">UK Parliament</option>
+                    </select>
+                </li>
+                <li>
+                    <span>2° Opção de Comitê:</span><br>
+                    <select name="comite" id="comite_two" class="comite_two">
+                        <option value="null">Comitê 2° Opção</option>
+                        <option value="CSM/Wakanda">Conselho de Segurança Mundial</option>
+                        <option value="ICJ">Corte Internacional de Justiça</option>
+                        <option value="OEA">Organização dos Estados Americanos</option>
+                        <option value="UK Parliament">UK Parliament</option>
+                    </select>
+                </li>
+                <li>
+                    <span>Escolha uma Matéria:</span><br>
+                    <select name="materia" id="materia" class="materia">
+                        <option value="null">Matéria</option>
+                        <option value="Língua Portuguesa">Língua Portuguesa</option>
+                        <option value="Literatura">Literatura</option>
+                        <option value="Redação">Redação</option>
+                        <option value="Filosofia">Filosofia</option>
+                        <option value="Sociologia">Sociologia</option>
+                        <option value="História">História</option>
+                        <option value="Geografia">Geografia</option>
+                        <option value="Inglês">Inglês</option>
+                        <option value="Matemática">Matemática</option>
+                        <option value="Física">Física</option>
+                        <option value="Química">Química</option>
+                        <option value="Biologia">Biologia</option>
+                    </select>
+                </li>
+                <li><span>Celular (Whatsapp):</span><br><input type="tel" name="cellphone" placeholder="Celular" id="contact" class="contact"></li>
+                <li>
+                    <span>Unidade em que Estuda:</span><br>
+                    <select name="local" id="local" class="local">
+                        <option value="null">Unidade</option>
+                        <option value="Taquara">Unidade Taquara</option>
+                        <option value="Recreio">Unidade Recreio</option>
+                    </select>
+                </li>
+            </ul>
+            <div class="submit_btn" id="submit_btn">Enviar</div>
+        </center>
     </section>
     <script src="./script/insc.js"></script>
 </body>
