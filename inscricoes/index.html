@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,70 @@
 </head>
 <body>
     <section class="await" id="await">
-        
+        <center><div class="logo_mis"></div></center>
+         <!-- Contador -->
+         <center>
+            <div id="countdown" class="countdown">
+                <center><h4>As inscrições abrem em:</h4></center>
+                <div class="time">
+                <h2 id="days"></h2>
+                <small>Dias</small>
+                </div>
+            
+                <div class="time">
+                <h2 id="hours"></h2>
+                <small>Horas</small>
+                </div>
+            
+                <div class="time">
+                <h2 id="minutes"></h2>
+                <small>Minutos</small>
+                </div>
+            
+                <div class="time">
+                <h2 id="seconds"></h2>
+                <small>Segundos</small>
+                </div>
+                <center><h6>03 de Março de 2023</h6></center>
+            </div>
+            </center>
+    <!------------------>
+    </section>
+    <section class="insc" id="insc">
+        <ul class="forms">
+            <li><input type="text" name="name" placeholder="Nome Completo" id="name" class="name"></li>
+            <li><input type="text" name="matricula" placeholder="Matrícula" id="matricula" class="matricula"></li>
+            <li>
+                <select name="turma" id="turma" class="turma">
+                    <option value="null">Turma</option>
+                    <option value="1° AM">1° AM</option>
+                    <option value="1° BM">1° BM</option>
+                    <option value="1° AT">1° AT</option>
+                    <option value="2° AM">2° AM</option>
+                    <option value="2° BM">2° BM</option>
+                    <option value="2° CM">2° CM</option>
+                    <option value="2° AT">2° AT</option>
+                    <option value="3° Ano">3° Ano</option>
+                </select>
+            </li>
+            <li>
+                <select name="comite" id="comite" class="comite">
+                    <option value="null">Comitê</option>
+                    <option value="CSM/Wakanda">Conselho de Segurança Mundial</option>
+                    <option value="ICJ">Corte Internacional de Justiça</option>
+                    <option value="OEA">Organização dos Estados Americanos</option>
+                    <option value="UK Parliament">UK Parliament</option>
+                </select>
+            </li>
+            <li><input type="tel" name="cellphone" placeholder="Celular" id="contact" class="contact"></li>
+            <li>
+                <select name="local" id="local" class="local">
+                    <option value="null">Unidade</option>
+                    <option value="Taquara">Unidade Taquara</option>
+                    <option value="Recreio">Unidade Recreio</option>
+                </select>
+            </li>
+        </ul>
     </section>
     <script src="./script/insc.js"></script>
 </body>
