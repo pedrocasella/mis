@@ -68,9 +68,30 @@ document.getElementById('submit_btn').addEventListener('click', ()=>{
         Matéria: materia,
         Whatsapp: cellphone,
         Unidade: unidade,
-    }
+    }   
+
     if(name == '' || matricula == '' || turma == 'null' || opt1 == 'null' || opt2 == 'null' || materia == 'null' || cellphone == '' || unidade == 'null'){
         window.alert('Verifique se você deixou algum campo em branco e tente novamente!')
+        document.querySelectorAll('select').forEach((req)=>{
+            if(req.value == 'null'){
+                req.style.borderColor = 'red'
+                req.style.borderWidth = '2px'
+            }else{
+                req.style.borderColor = '#000'
+                req.style.borderWidth = '1px'
+            }
+        })
+
+        for(let i = 0; i <= document.querySelectorAll('input').length; i++){
+            if(document.querySelectorAll('input')[i].value == ''){
+                document.querySelectorAll('input')[i].style.borderColor = 'red'
+                document.querySelectorAll('input')[i].style.borderWidth = '2px'
+            }else{
+                document.querySelectorAll('input')[i].style.borderColor = '#000'
+                document.querySelectorAll('input')[i].style.borderWidth = '1px'
+            }
+
+        }
     }else{
         fetch('https://api.sheetmonkey.io/form/nv8ARZsDNUpHMyVVHM5SEg', {
             method: 'post',
