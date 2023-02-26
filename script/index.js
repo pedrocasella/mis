@@ -37,12 +37,7 @@ setInterval(()=>{
         document.getElementById('navigation').style.animation = 'opacity .5s ease-in'
         document.getElementById('navigation').style.display = 'block'
     }else{
-        document.getElementById('navigation').style.animation = 'opacity .5s ease-in reverse'
-        setTimeout(()=>{
-            document.getElementById('navigation').style.display = 'none'
-            document.getElementById('navigation').style.animation = 'opacity .5s ease-in'
-        }, 100*1)
-        
+        document.getElementById('navigation').style.display = 'none'
     }
 },100*5)
 

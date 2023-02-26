@@ -101,7 +101,7 @@
 }
 
 .insc{
-    margin: 9rem 0rem 2rem 0rem;
+    margin: 9rem 0rem 0rem 0rem;
 }
 
 .insc .forms{
@@ -117,8 +117,17 @@
     float: left;
 }
 
+.insc .forms li .detail{
+    color: rgb(255, 13, 13);
+    width: 267px;
+    position: absolute;
+    margin-top: 2px;
+    margin-left: -135px;
+    font-size: 9pt;
+}
+
 .insc .forms li{
-    margin: 1rem .5rem 1rem .5rem;
+    margin: 2.5rem .5rem 1rem .5rem;
 }
 
 .insc .forms li input{
@@ -136,12 +145,14 @@
 }
 
 .insc .submit_btn{
-    width: 100px;
+    width: 150px;
     padding: 1rem;
     background-color: #035aa9;
     border-radius: 30px;
     color: #fff;
     font-weight: bolder;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .insc .submit_btn:hover{
@@ -250,6 +261,21 @@
 
   /*----------*/
 
+
+/*--------*/
+
+/* Footer */
+footer{
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #035aa9;
+    z-index: 10;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32);
+    display: block;
+    animation: opacity .5s ease-in;
+}
 /*--------*/
 
 @media screen and (max-width: 912px){
@@ -289,7 +315,7 @@
         }
 
         .insc{
-            margin: 9rem 0rem 2rem 0rem;
+            margin: 9rem 0rem 0rem 0rem;
         }
 
         .insc .forms{

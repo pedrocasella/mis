@@ -33,7 +33,7 @@ const dataInsc = new Date()
 const atualDay = dataInsc.getDate()
 const atualMonth = dataInsc.getMonth() + 1
 const month = '0' + atualMonth
-const numberDate = 303 //parseInt(atualDay + month)
+const numberDate = 303//parseInt(atualDay + month)
 if(numberDate < 303 || numberDate > 1003){
     document.getElementById('await').style.display = 'block'
     document.getElementById('insc').style.display = 'none'
@@ -103,10 +103,61 @@ document.getElementById('submit_btn').addEventListener('click', ()=>{
         }).then((result)=>{
             if(result.status == 200){
                 document.getElementById('sucess').style.display = 'block'
+                document.getElementById('insc').style.display = 'none'
             }else{
                 window.alert('Sua Inscrição não foi realizada. Tente novamente!')
             }
         })
     }
 
+})
+
+//comite options
+setInterval(()=>{
+    const value1 = document.getElementById('comite').value
+    const subtitle1 = document.getElementById('sub_opt1')
+    const value2 = document.getElementById('comite_two').value
+    const subtitle2 = document.getElementById('sub_opt2')
+
+    if(value1 == 'null'){
+        subtitle1.innerHTML = ''
+    }
+
+    if(value1 == 'CSM/Wakanda'){
+        subtitle1.innerHTML = '*' + 'CSM (S.H.I.E.L.D) - Violação de Wakanda à Carta das Nações Unidas.'
+    }
+
+    if(value1 == 'ICJ'){
+        subtitle1.innerHTML = '*' + 'ICJ - EUA VS PALESTINA, Palestina denuncia Estados Unidos por mudar sua embaixada em Israel.'
+    }
+
+    if(value1 == 'OEA'){
+        subtitle1.innerHTML = '*' + 'OEA - Invasão de Terras Índigenas nas Américas.'
+    }
+
+    if(value1 == 'UK Parliament'){
+        subtitle1.innerHTML = '*' + 'UK Parliament - Debate para o fim da Monarquia e implementação de uma República no Reino Unido.'
+    }
+
+    if(value2 == 'null'){
+        subtitle2.innerHTML = ''
+    }
+    
+    if(value2 == 'CSM/Wakanda'){
+        subtitle2.innerHTML = '*' + 'CSM (S.H.I.E.L.D) - Violação de Wakanda à Carta das Nações Unidas.'
+    }
+    
+    if(value2 == 'ICJ'){
+        subtitle2.innerHTML = '*' + 'ICJ - EUA VS PALESTINA, Palestina denuncia Estados Unidos por mudar sua embaixada em Israel.'
+    }
+    
+    if(value2 == 'OEA'){
+        subtitle2.innerHTML = '*' + 'OEA - Invasão de Terras Índigenas nas Américas.'
+    }
+    
+    if(value2 == 'UK Parliament'){
+        subtitle2.innerHTML = '*' + 'UK Parliament - Debate para o fim da Monarquia e implementação de uma República no Reino Unido.'
+    }
+    
+    
 })

@@ -20,6 +20,10 @@ body{
     background-color: #fff;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* Navigation */
 
 .navigation{
@@ -30,8 +34,8 @@ body{
     z-index: 10;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32); 
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32);
-    display: block;
-    animation: opacity .5s ease-in;
+    display: none;
+    animation: a;
 }
 
 .navigation .logo{
@@ -54,6 +58,29 @@ nav{
     background-color: #035aa9;
     z-index: -1;
     color: #fff;
+}
+
+nav .nav_options{
+    display: inline-flex;
+    position: absolute;
+    color: #fff;
+    list-style: none;
+    z-index: 3;
+}
+
+nav .nav_options a{
+    color: #fff;
+    text-decoration: none;
+}
+
+nav .nav_options li{
+    padding: 1.5rem;
+}
+
+nav .nav_options li:hover{
+    transition: linear .3s;
+    background-color: #ffffff27;
+    cursor: pointer;
 }
 
 nav .background_nav{
@@ -658,6 +685,28 @@ nav .background_nav{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+    nav .nav_options{
+        display: none;
+        position: absolute;
+        color: #fff;
+        list-style: none;
+        z-index: 3;
+    }
+    
+    nav .nav_options a{
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    nav .nav_options li{
+        padding: 1.5rem;
+    }
+    
+    nav .nav_options li:hover{
+        transition: linear .3s;
+        background-color: #ffffff27;
+        cursor: pointer;
     }
 
     /*Insta Btn*/
