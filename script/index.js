@@ -79,7 +79,7 @@ document.getElementById('uk').addEventListener('mouseover', ()=>{
     //change cards
     document.getElementById('picture').style.backgroundImage = 'url(./../img/ukparliamentbackground.webp)'
     document.getElementById('title').innerText = 'UK Parliament'
-    document.getElementById('resume').innerText = 'O Parlamento do Reino Unido é um novo comitê no MIS, e nessa edição irá discutir e elaborar uma solução para o fim da Monarquia em todo o Reino Unido e a implementação de uma monarquia, seguindo os protocolos de elaboração de projetos e leis britânicos.'
+    document.getElementById('resume').innerText = 'O Parlamento do Reino Unido é um novo comitê no MIS, e nessa edição irá discutir e elaborar uma solução para o fim da Monarquia em todo o Reino Unido e a implementação de uma república, seguindo os protocolos de elaboração de projetos e leis britânicos.'
 })
 
 //Contador
