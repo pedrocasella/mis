@@ -66,7 +66,7 @@ document.getElementById('submit_btn').addEventListener('click', ()=>{
         'Comitê de Preferência': opt1,
         '2° Opção': opt2,
         Matéria: materia,
-        Whatsapp: cellphone,
+        Contato: cellphone,
         Unidade: unidade,
     }   
 

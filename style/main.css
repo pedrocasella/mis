@@ -339,6 +339,16 @@ nav .background_nav{
         font-size:2em;
         margin:0% 1%;
         }
+
+        .footer .logo{
+            width: 200px;
+            height: 80px;
+            background-image: url(./../icon/icone_mis.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: -2rem;
+        }
         
     /*--------*/
 /*-------------*/
