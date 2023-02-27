@@ -8,7 +8,7 @@ const seconds = document.getElementById('seconds');
 
 const currentYear = new Date().getFullYear();
 
-const newYearTime = new Date(`March 03 ${currentYear} 00:00:00`);
+const newYearTime = new Date(`March 10 ${currentYear} 00:00:00`);
 
 // Update countdown time
 function updateCountdown() {
@@ -33,8 +33,8 @@ const dataInsc = new Date()
 const atualDay = dataInsc.getDate()
 const atualMonth = dataInsc.getMonth() + 1
 const month = '0' + atualMonth
-const numberDate = 303//parseInt(atualDay + month)
-if(numberDate < 303 || numberDate > 1003){
+const numberDate = parseInt(atualDay + month)
+if(numberDate < 1003 || numberDate > 1703){
     document.getElementById('await').style.display = 'block'
     document.getElementById('insc').style.display = 'none'
 }else{
