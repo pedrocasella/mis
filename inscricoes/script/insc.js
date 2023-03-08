@@ -8,7 +8,7 @@ const seconds = document.getElementById('seconds');
 
 const currentYear = new Date().getFullYear();
 
-const newYearTime = new Date(`March 10 ${currentYear} 00:00:00`);
+const newYearTime = new Date(`March 17 ${currentYear} 00:00:00`);
 
 // Update countdown time
 function updateCountdown() {
@@ -34,7 +34,7 @@ const atualDay = dataInsc.getDate()
 const atualMonth = dataInsc.getMonth() + 1
 const month = '0' + atualMonth
 const numberDate = parseInt(atualDay + month)
-if(numberDate < 1003 || numberDate > 1703){
+if(numberDate < 803 || numberDate > 1703){
     document.getElementById('await').style.display = 'block'
     document.getElementById('insc').style.display = 'none'
 }else{
@@ -93,7 +93,7 @@ document.getElementById('submit_btn').addEventListener('click', ()=>{
 
         }
     }else{
-        fetch('https://api.sheetmonkey.io/form/nv8ARZsDNUpHMyVVHM5SEg', {
+        fetch('https://api.sheetmonkey.io/form/vLYhyt1J3yn9KT8QqGFJwg', {
             method: 'post',
             headers: {
                 'Accept' : 'application/json',
