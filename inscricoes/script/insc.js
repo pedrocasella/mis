@@ -1,14 +1,15 @@
+document.getElementById('home_btn').addEventListener('click', ()=>{
+    window.location.assign('https://mis.icone.g12.br/')
+})
+
 const data = new Date()
 
 //Contador
-const days = document.getElementById('days');
-const hours = document.getElementById('hours');
-const minutes = document.getElementById('minutes');
-const seconds = document.getElementById('seconds');
+
 
 const currentYear = new Date().getFullYear();
 
-const newYearTime = new Date(`March 17 ${currentYear} 00:00:00`);
+const newYearTime = new Date(`March 18 ${currentYear} 00:00:00`);
 
 // Update countdown time
 function updateCountdown() {
@@ -20,10 +21,6 @@ function updateCountdown() {
     const m = Math.floor(diff / 1000 / 60) % 60;
     const s = Math.floor(diff / 1000) % 60;
 
-    days.innerHTML = d;
-    hours.innerHTML = h < 10 ? '0' + h : h;
-    minutes.innerHTML = m < 10 ? '0' + m : m;
-    seconds.innerHTML = s < 10 ? '0' + s : s;
 }
 
 setInterval(updateCountdown, 1000);
@@ -34,7 +31,8 @@ const atualDay = dataInsc.getDate()
 const atualMonth = dataInsc.getMonth() + 1
 const month = '0' + atualMonth
 const numberDate = parseInt(atualDay + month)
-if(numberDate < 803 || numberDate > 1703){
+
+if(numberDate < 803 || numberDate >= 1803){
     document.getElementById('await').style.display = 'block'
     document.getElementById('insc').style.display = 'none'
 }else{

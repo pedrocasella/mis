@@ -4,6 +4,46 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Details */
+.detail001{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: -20px;
+    left: -20px;
+    background-image: url(./../img/detail001.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .8;
+}
+
+.detail002{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    right: 0;
+    background-image: url(./../img/detail002.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.detail004{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -8px;
+    right: 2rem;
+    background-image: url(./../img/detail004.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*--------*/
+
 /* Animations */
 
 @keyframes opacity {
@@ -30,7 +70,7 @@ html{
     position: fixed;
     width: 100%;
     height: 100px;
-    background-color: #035aa9;
+    background-color: #004aad;
     z-index: 10;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32); 
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32);
@@ -88,7 +128,7 @@ nav .background_nav{
     height: 590px;
     opacity: .2;
     filter: blur(2px);
-    background-color: #035aa9;
+    background-color: #004aad;
     top: 0;
     position: absolute;
     background-image: url(./../img/projetomis-20230130-0066.jpg);
@@ -97,25 +137,6 @@ nav .background_nav{
     background-size: cover;
 }
 
-    /* X X X */
-    nav .x_detail{
-        margin-top: 2rem;
-        right: 10%;
-        position: absolute;
-        display: inline-flex;
-        list-style: none;
-    }
-
-    nav .x_detail li span{
-        width: 10px;
-        height: 10px;
-        padding: 10px;
-        background-image: url(./../icon/x.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 95%;
-    }
-    /*-----------------*/
     /* Logo and Title */    
     nav .logo{
         width: 100px;
@@ -124,14 +145,22 @@ nav .background_nav{
         background-position: center;
         background-repeat: no-repeat;
         background-size: 98%;
-        transform: translate(30px, 100px);
     }
 
     nav .title_ul{
         position: absolute;
         z-index: 2;
         list-style: none;
-        margin: 6rem 2.5rem 2.5rem 3rem;
+        margin: 4rem 2.5rem 2.5rem 3rem;
+    }
+
+    nav .title_ul li .logo_mis_2023{
+        width: 300px;
+        height: 300px;
+        background-image: url(./../icon/logomis2023.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     nav .title_ul li{
@@ -149,6 +178,7 @@ nav .background_nav{
 
     /*Insta Btn*/
     .insta_btn{
+        top: 2rem;
         position: absolute;
         right: 5%;
     }
@@ -271,7 +301,7 @@ nav .background_nav{
     /* Contador */
 
     .countdown{
-        margin-top: 6rem;
+        margin-top: 10rem;
     }
 
     .time {
@@ -302,10 +332,14 @@ nav .background_nav{
         width: 100%;
         top: 2800px;
         position: absolute;
-        background:#035aa9;
+        background: #0267c1;
         padding:30px 0px;
         font-family: 'Play', sans-serif;
         text-align:center;
+        background-image: url(./../img/background_footer.png);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 100%;
         }
         
         .footer .row{
@@ -726,13 +760,13 @@ nav .background_nav{
 }
 
 @media screen and (max-width: 968px){
+    /*-------*/
     /*background */
     nav .background_nav{
         width: 100%;
         height: 590px;
         opacity: .2;
         filter: blur(2px);
-        background-color: #035aa9;
         top: 0;
         position: absolute;
         background-image: url(./../img/projetomis-20230130-0066.jpg);
@@ -763,11 +797,28 @@ nav .background_nav{
         cursor: pointer;
     }
 
+    nav .title_ul{
+        position: absolute;
+        z-index: 2;
+        list-style: none;
+        margin: 2.3rem 2.5rem 2.5rem 3rem;
+    }
+
+    nav .title_ul li .logo_mis_2023{
+        width: 250px;
+        height: 250px;
+        background-image: url(./../icon/logomis2023.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 1.5rem;
+    }
+
     /*Insta Btn*/
     .insta_btn{
         position: absolute;
-        left: 15%;
-        top: 38%;
+        left: 12.2rem;
+        top: 1.5rem;
     }
 
     /* Modal About */
@@ -787,7 +838,8 @@ nav .background_nav{
         /* Contador */
 
         .countdown{
-            margin-top: 15.5rem;
+            margin-top: 18.8rem;
+            font-size: 10pt;
         }
 
     .about .modal_about::-webkit-scrollbar{
@@ -989,6 +1041,10 @@ nav .background_nav{
             text-align:left;
             padding:5%;
             top: 2865px;
+            background-image: url(./../img/background_footer.png);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: 100%;
             }
             .footer .row ul li{
             display:block;

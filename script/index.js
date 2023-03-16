@@ -90,7 +90,7 @@ document.getElementById('uk').addEventListener('mouseover', ()=>{
 
     const currentYear = new Date().getFullYear();
 
-    const newYearTime = new Date(`March 17 ${currentYear} 00:00:00`);
+    const newYearTime = new Date(`March 18 ${currentYear} 00:00:00`);
 
     // Update countdown time
     function updateCountdown() {
