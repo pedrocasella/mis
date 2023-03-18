@@ -302,6 +302,7 @@ nav .background_nav{
 
     .countdown{
         margin-top: 10rem;
+        display: none;
     }
 
     .time {
@@ -805,13 +806,14 @@ nav .background_nav{
     }
 
     nav .title_ul li .logo_mis_2023{
-        width: 250px;
-        height: 250px;
+        width: 330px;
+        height: 330px;
         background-image: url(./../icon/logomis2023.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        margin-left: 1.5rem;
+        margin-top: 1.5rem;
+        margin-left: -1rem;
     }
 
     /*Insta Btn*/
@@ -840,6 +842,7 @@ nav .background_nav{
         .countdown{
             margin-top: 18.8rem;
             font-size: 10pt;
+  
         }
 
     .about .modal_about::-webkit-scrollbar{
