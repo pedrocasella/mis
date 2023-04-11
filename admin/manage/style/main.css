@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Animations*/
+
+@keyframes opacity {
+    0%{
+        opacity: 0;
+        transform: translateY(-.5rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+
+/*Picture*/
+.picture{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mis{
+    transform: translateY(1rem);
+    margin-left: 2rem;
+    width: 50px;
+    height: 50px;
+    background: center url(./../../../icon/whitemis00354.png) no-repeat;
+    position: absolute;
+    background-size: cover;
+    cursor: pointer;
+}
+
+aside{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-color: #fff;
+    color: #fff;
+    width: 25%;
+    height: 100%;
+    background-color: #005aad;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
+}
+
+aside .perfil{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    height: fit-content;
+}
+
+aside .perfil .picture{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #141414;
+    margin-top: 4rem;
+}
+
+aside .perfil .name{
+    margin: 2rem;
+}
+
+aside .options{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+aside .options ul{
+    list-style: none;
+}
+
+aside .options ul li{
+    padding: 1rem;
+    border-top-width: 1px;
+    border-top-style: solid;
+    user-select: none;
+}
+
+aside .options ul li:hover{
+    cursor: pointer;
+    transition: linear .3s;
+    background-color: rgba(255, 255, 255, 0.26);
+}
+
+/*access*/
+.set_access{
+    width: 75%;
+    position: absolute;
+    right: 0;
+    display: none;
+    animation: opacity .3s ease-in;
+}
+
+.set_access h4{
+    margin-top: 6rem;
+}
+
+.set_access input{
+    width: 150px;
+    padding: .5rem;
+    border-radius: 30px;
+    border-style: solid;
+}
+
+.set_access button{
+    margin-top: 2rem;
+    width: fit-content;
+    background-color: #005aad;
+    border-radius: 30px;
+    margin-left: .5rem;
+    border-style: none;
+    padding: .5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.set_access button:hover{
+    transition: linear .3s;
+    cursor: pointer;
+    background-color: #0c66bb;
+}
+
+.set_access .emails_Added{
+    margin: 2rem;
+}
+
+.set_access .emails_Added ul{
+    list-style: none;
+}
+
+.set_access .emails_Added ul li{
+    margin: 1rem;
+}
+
+.set_access .emails_Added ul li .delete{
+    font-weight: bolder;
+    user-select: none;
+    cursor: pointer;
+}

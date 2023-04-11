@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/main.css">
+    <title>MIS | Gestão</title>
+</head>
+<body>
+    <header>
+        <div class="mis"></div>
+        <center>
+            <nav>
+                <ul>          
+                    <li>Gerenciamento</li>
+                </ul>
+            </nav>
+        </center>
+        <div class="picture" id="picture"></div>
+    </header>
+    <section class="inscricoes" id="inscricoes">
+        <div class="ul_title" id="ul_insertComunicado"><span class="more_comunicado" id="more_comunicado">+ </span>Inserir Comunicado</div>
+        <div class="insert_comunicado" id="insert_comunicado">
+            <ul>
+                <li><div class="span">Habilitar Comunicado:</div><input type="checkbox" id="switch_comunicado" /><label for="switch_comunicado">Toggle</label></li>
+                <li><div class="span">Título</div><input type="text" name="" id="title" class="title" placeholder="Titulo do Comunidado"></li>
+                <li><div class="span">Texto</div><textarea name="" id="comunicado" placeholder="Texto do Comunicado" cols="30" rows="10"></textarea></li>
+                <li><div class="span">Exibir Contador:</div><input type="checkbox" id="switch_counter" /><label for="switch_counter">Toggle</label></li>
+                <li><div class="span">Data do Contador</div><input type="date" name="" id="date"></li>
+                <li><div class="comunicado_btn" id="comunicado_btn">Salvar</div></li>
+            </ul>
+        </div>
+
+        <div class="ul_title" id="ul_insertComittes"><span id="more_insertComittes">+ </span>Definir Comitês e Delegados</div>
+        <div class="insert_comittes" id="insert_comittes">
+            <span class="span">Criar novo comitê:</span><br><br>
+            <input type="text" name="" placeholder="Nome do Comitê" id="comite_name" class="comite_name">
+            <div class="insertComitte_btn" id="insertComitte_btn">Criar Comitê</div>
+            <ul class="ul_comittes" id="ul_comittes">
+                
+            </ul><br>
+            <span class="span">Adicionar participante no comitê</span><br><br>
+            <input type="text" name="" placeholder="Nome do Participante" id="participante_add" class="participante_add">
+            <input type="text" name="" placeholder="Cargo" id="function_add" class="fuction_add">
+            <select name="" id="select_comitte">
+                <option value="null">--Selecione--</option>
+            </select>
+            <div class="addParticipante_btn" id="addParticipante_btn">Definir Comitê</div>
+            <div class="table" id="table">
+
+            </div>
+            <center>
+                <div class="generate_table">
+                    <select name="" id="table_select" class="table_select">
+                    </select>
+                    <div class="generate_btn" id="generate_btn">Gerar Planilha</div>
+                </div>
+            </center>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
+    
+    <script type="module" src="./script/app.js"></script>
+</body>
+</html>
