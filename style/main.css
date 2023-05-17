@@ -331,7 +331,7 @@ nav .background_nav{
     /* Footer */
     .footer{
         width: 100%;
-        top: 2800px;
+        top: 3100px;
         position: absolute;
         background: #0267c1;
         padding:30px 0px;
@@ -563,11 +563,55 @@ nav .background_nav{
     z-index: 2;
 }
 
+/* Cronograma*/
+
+        /* Cronograma */
+        .cronograma{
+            position: absolute;
+            top: 1780px;
+            width: 100%;
+            padding: 4rem;
+            color: #54595F;
+        }
+
+        .cronograma h3{
+            color: #000;
+        }
+
+        .cronograma ul{
+            list-style: none;
+            display: inline-flex;
+            flex-wrap: wrap;
+        }
+
+        .cronograma ul li{
+            margin-right: 4rem;
+            margin-left: 4rem;
+        }
+
+        .cronograma h1{
+            font-size: 40pt;
+            margin: 2rem;
+            color: #035aa9;
+        }
+
+        .cronograma table .atividade{
+            padding-right: 2rem;
+        }
+
+        .cronograma table .horario{
+            font-weight: bolder;
+            color: #000;
+        }
+
+
+/*----------*/
+
 /* Imprensa */
 
 .imprensa{
     position: absolute;
-    top: 1800px;
+    top: 2250px;
     width: 100%;
 }
 
@@ -667,7 +711,7 @@ nav .background_nav{
     position: absolute;
     width: 100%;
     height: 300px;
-    top: 2500px;
+    top: 2850px;
 }
 
 .inscricoes h1{
@@ -819,7 +863,7 @@ nav .background_nav{
     /*Insta Btn*/
     .insta_btn{
         position: absolute;
-        left: 12.2rem;
+        left: 12.1rem;
         top: 1.5rem;
     }
 
@@ -925,11 +969,39 @@ nav .background_nav{
 
         }
 
+        /* Cronograma*/
+
+        .cronograma{
+            position: absolute;
+            top: 1780px;
+            width: 100%;
+        }
+
+        .cronograma h1{
+            font-size: 30pt;
+            margin: 2rem;
+            color: #035aa9;
+        }
+
+        .cronograma ul{
+            display: inline-block;
+
+        }
+
+        .cronograma ul li{
+            margin-left: 0rem;
+            margin-right: 0rem;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+        }
+
+        /*---------*/
+
         /* Imprensa */
 
         .imprensa{
             position: absolute;
-            top: 1780px;
+            top: 2550px;
             width: 100%;
         }
 
@@ -1031,7 +1103,7 @@ nav .background_nav{
             position: absolute;
             width: 100%;
             height: 300px;
-            top: 2650px;
+            top: 3450px;
         }
 
         .inscricoes h1{
@@ -1043,7 +1115,7 @@ nav .background_nav{
         .footer{
             text-align:left;
             padding:5%;
-            top: 2865px;
+            top: 3665px;
             background-image: url(./../img/background_footer.png);
             background-position: top;
             background-repeat: no-repeat;

@@ -35,8 +35,10 @@
        //View Comunicado
        if(data.viewComunicado == false){
             document.getElementById('comunicados').style.display = 'none'
+            document.getElementById('result_area').style.display = 'block'
        }else{
             document.getElementById('comunicados').style.display = 'block'
+            document.getElementById('result_area').style.display = 'none'
        }
        
        //Contador
@@ -85,32 +87,46 @@
             }
   })
 
-  //Results
-    //exibir caixas e tabelas
-    get(child(dbRef, 'comites/')).then((snapshot) => {
-     if (snapshot.exists()) {
-        snapshot.forEach((childSnapshot)=>{
-           const data = childSnapshot.val()
-           const key = childSnapshot.key
-           document.getElementById('table').innerHTML += '<table id="table' + data.name.replaceAll(' ','_') + '"> <thead> <tr> <th class="td_name">Participante</th> <th class="td_comite">Cargo</th> <th class="td_cargo">Comitê</th> </tr> </thead> <tbody id="colum' + data.name.replaceAll(' ', '_') + '"></tbody> </table>'
 
- 
-           //Exibir tabela de delegados
-             get(child(dbRef, 'comites/' + data.name + '/delegados')).then((snapshot) => {
-               if (snapshot.exists()) {
-                 snapshot.forEach((childSnapshot)=>{
-                     const data = childSnapshot.val()
-                     const key = childSnapshot.key
-                     document.getElementById('colum' + data.comite.replaceAll(' ', '_')).innerHTML += '<tr> <td class="td_name">' + data.nome + '</td> <td class="td_cargo">' + data.cargo +  '</td> <td class="td_comite">' + data.comite + '</td> </tr>'
-                 })
-                 
-               }
-             })
-        })
-        
-     }
-   })
-          
+  get(child(dbRef, 'comites/')).then((snapshot) => {
+    if (snapshot.exists()) {
+       snapshot.forEach((childSnapshot)=>{
+          const data = childSnapshot.val()
+          const key = childSnapshot.key
+          document.getElementById('table').innerHTML += '<table id="table' + data.name.replaceAll(' ','_') + '"> <thead> <tr> <th class="td_name">Participante</th> <th class="td_comite">Cargo</th> <th class="td_cargo">Comitê</th> </tr> </thead> <tbody id="colum' + data.name.replaceAll(' ', '_') + '"></tbody> </table>'
+       })
+       
+    }
+  })
+
+      //Exibir tabela de delegados
+      get(child(dbRef, 'list/')).then((snapshot) => {
+        if (snapshot.exists()) {
+           snapshot.forEach((childSnapshot)=>{
+            const data = childSnapshot.val()
+
+            if(data.comite == 'ICJ'){
+              document.getElementById('tableCorte_Internacional_de_Justiça').innerHTML += '<tr> <td class="td_name">' + data.aluno + '</td> <td class="td_cargo">' + data.cargo +  '</td> <td class="td_comite">Corte Internacional de Justiça</td> </tr>'
+            }
+
+            if(data.comite == 'UK Parliament'){
+              document.getElementById('tableUK_Parliament').innerHTML += '<tr> <td class="td_name">' + data.aluno + '</td> <td class="td_cargo">' + data.cargo +  '</td> <td class="td_comite">UK Parliament</td> </tr>'
+            }
+
+            if(data.comite == 'CSM'){
+              document.getElementById('tableConselho_de_Segurança_Mundial').innerHTML += '<tr> <td class="td_name">' + data.aluno + '</td> <td class="td_cargo">' + data.cargo +  '</td> <td class="td_comite">Conselho de Segurança Mundial</td> </tr>'
+            }
+
+            if(data.comite == 'OEA'){
+              document.getElementById('tableOrganização_dos_Estados_Americanos').innerHTML += '<tr> <td class="td_name">' + data.aluno + '</td> <td class="td_cargo">' + data.cargo +  '</td> <td class="td_comite">Organização dos Estados Americanos</td> </tr>'
+            }
+
+            if(data.comite == 'Ouvinte'){
+              document.getElementById('tableOuvintes').innerHTML += '<tr> <td class="td_name">' + data.aluno + '</td> <td class="td_cargo">' + data.cargo +  '</td> <td class="td_comite">' + data.comite + '</td> </tr>'
+            }
+           
+        })}
+      })  
         
 
 

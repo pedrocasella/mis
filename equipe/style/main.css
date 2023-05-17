@@ -10,99 +10,6 @@ ul{
     flex-wrap: wrap;
 }
 
-/* Pictures */
-
-#bianca{
-    background-image: url(./../team/IMG_7181.JPG);
-    background-size: 280%;
-    background-position-y: 80%;
-}
-
-#pedro{
-    background-image: url(./../team/baixados\ \(1\).jfif);
-    background-position-y: top;
-}
-
-#paiva{
-    background-image: url(./../team/Screenshot_2023-03-16-21-09-30-313_com.whatsapp.jpg);
-    background-position-y: 25%;
-}
-
-#paulo{
-    background-image: url(./../team/Paulo_Liborio.png);
-}
-
-#gabriel_ramos{
-    background-image: url(./../team/Gabriel_Ramos.png);
-}
-
-
-    /*Logística*/
-    #ayrton{
-        background-image: url(./../team/ayrton.jfif);
-        background-size: 200%;
-        background-position-x: right;
-        background-position-y: 20%;
-    }
-    #bibi{
-        background-image: url(./../team/bibi.jpg);
-        background-position-y: -6%;
-    }
-    #duda_marçal{
-        background-image: url(./../team/duda.jfif);
-    }
-    #gabriel_venancio{
-        background-image: url(./../team/gabrielvenancio.jpg);
-        background-size: 300%;
-        background-position-x: 65%;
-    }
-    #isaias{
-        background-image: url(./../team/isaias.jfif); 
-    }
-    #jm{
-        background-image: url(./../team/jm.jpg);
-        background-size: 150%;
-    }
-    #luquinhas{
-        background-image: url(./../team/luquinhas.jfif);
-    }
-    #vina{
-        background-image: url(./../team/vina.jpg);
-        background-size: 200%;
-        background-position-y: top;
-        background-position-x: 60%;
-    }
-
-    /* Conselho de Segurança Mundial */
-
-    #milena{
-        background-image: url(./../team/milena.jpg);
-    }
-
-    /* Corte Internacional de Justiça */
-
-    #julia{
-        background-image: url(./../team/julia.jpg);
-        background-size: 350%;
-        background-position-y: 8%;
-    }
-
-    #lorena_angelucci{
-        background-image: url(./../team/lorena.jpg);
-        background-size: 180%;
-        background-position-y: 20%;
-        background-position-x: 90%;
-    }
-
-    #joao_pedro{
-        background-image: url(./../team/joãopedro.jpg);
-        background-size: 390%;
-        background-position-y: 30%;
-        background-position-x: 38%;
-    }
-
-/*----------*/
-
 /* Nav */
 nav{
     width: 100%;
@@ -123,76 +30,41 @@ nav .logo{
     margin-left: 1rem;
 }
 /*----------*/
- 
-.equipe{
-    margin: 2rem;
+
+.equipe .team-ul{
+    padding: 2rem;
 }
 
-.equipe h3{
-    margin: 2rem;
-    font-size: 12pt;
+.equipe .team-ul h2{
+    color: #004aad;
+    margin: 1rem;
+}
+
+.equipe .team-ul h3{
     color: #004aad;
 }
-
-.equipe .user{
-    display: block;
-    list-style: none;
-    width: 200px;
-    align-items: center;
-    text-align: center;
-    font-size: 11pt;
-}
-
-.equipe .user li{
-    margin: .2rem;
-}
-
-.equipe .user .picture{
+ 
+.equipe .team-ul .picture{
     width: 100px;
     height: 100px;
-    background-color: black;
+    background-color: #000;
     border-radius: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: .5rem;
 }
 
-.equipe .team_ul{
-    display: inline-flex;
-    flex-wrap: wrap;
+.equipe .team-ul .cargo{
+    font-weight: bolder;
 }
 
-.equipe .team_ul li .secretariado{
-    display: inline-flex;
-}
-
-.equipe .team_ul li .logistica{
+.equipe .team-ul .members-ul{
     display: inline-flex;
 }
 
-.equipe .team_ul li .academico{
-    display: block;
-}
-
-.equipe .team_ul li .academico .csm{
-    display: inline-flex;
-}
-
-.equipe .team_ul li .academico .icj{
-    display: inline-flex;
-}
-
-.equipe .team_ul li .academico .oas{
-    display: inline-flex;
-}
-
-.equipe .team_ul li .academico .uk{
-    display: inline-flex;
-}
-
-.equipe .team_ul .subtitle{
-    margin: 2rem 1rem 2rem 1rem;
-    color: #035aa9;
+.equipe .team-ul .members-ul li{
+    margin: 1rem;
 }
 
 /* Footer */
@@ -213,29 +85,7 @@ footer{
 
 @media screen and (max-width: 968px){
 
-    .equipe{
-        margin: 2.5rem;
-    }
 
-    .equipe .user li{
-        margin: .2rem;
-        width: auto;
-    }
-
-    .equipe .user{
-        font-size: 9pt;
-        width: auto;
-    }
-    
-    .equipe .user .picture{
-        width: 80px;
-        height: 80px;
-        background-color: black;
-        border-radius: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
 
 
 }
