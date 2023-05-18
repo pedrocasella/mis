@@ -19,8 +19,29 @@
   const app = initializeApp(firebaseConfig);
   const database = getDatabase(app);
 
-  //Puxa os departamentos existentes no servidor e os exibe em lista
+  //Verifica a visibilidade das sessões
   const dbRef = ref(getDatabase());
+  get(child(dbRef, 'page_equipe/')).then((snapshot) => {
+    if (snapshot.exists()) {
+        const data = snapshot.val()
+
+        if(data.situation == true){
+            document.getElementById('equipe').style.display = 'block'
+            document.getElementById('construct').style.display = 'none'
+        }else{
+            document.getElementById('equipe').style.display = 'none'
+            document.getElementById('construct').style.display = 'block'
+        }
+
+    } else {
+   
+        
+    }
+    }).catch((error) => {
+    console.error(error);
+    });
+
+  //Puxa os departamentos existentes no servidor e os exibe em lista
   get(child(dbRef, 'departamento/')).then((snapshot) => {
     if (snapshot.exists()) {
         const dataArray = [];
@@ -58,7 +79,7 @@
                     }
                 }else{
                     if(data.departament == document.getElementById(data.departament).id){
-                        document.getElementById(data.departament).innerHTML += '<h3 style="display: none;">' + data.name + '</h3> <ul class="members-ul" id="' + data.name + '" style="display: none;"></ul>'
+                        document.getElementById(data.departament).innerHTML += '<h3 style="display: none;">' + data.name + '</h3><ul class="members-ul" id="' + data.name + '" style="display: none;"></ul>'
                     }
                 }
 
@@ -81,7 +102,7 @@
         
                     console.log(data)
                     if(data.comite == document.getElementById(data.comite).id){
-                        document.getElementById(data.comite).innerHTML += '<li> <div class="picture" style="background-image: url(' + data.photo.replaceAll('"', '') + ')"></div> <div class="name">' + data.pref_name + '</div> <div class="cargo">' + data.cargo + '</div> </li>'
+                        document.getElementById(data.comite).innerHTML += '<li class="equipe-li"> <div class="picture" style="background-image: url(' + data.photo.replaceAll('"', '') + ')"></div> <div class="name">' + data.pref_name + '</div> <div class="cargo">' + data.cargo + '</div> </li>'
                     }
         
                 })
@@ -92,3 +113,5 @@
         }).catch((error) => {
             console.error(error);
         });
+
+ 

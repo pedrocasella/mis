@@ -20,16 +20,58 @@ nav{
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32);
 }
 
+nav a{
+    width: 65px;
+    height: 65px;
+    position: absolute;
+}
+
 nav .logo{
-    width: 100px;
-    height: 100px;
-    background-image: url(./../icon/logomis2023.png);
+    width: 65px;
+    height: 65px;
+    background-image: url(./../icon/whitemis00354.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 132%;
-    margin-left: 1rem;
+    background-size: cover ;
+    transform: translate(2rem, 1rem);
+
 }
 /*----------*/
+
+/*Construct*/
+
+.construct{
+    width: 100%;
+    height: 350px;
+    display: none;
+}
+
+.construct ul{
+    display: inline-flex;
+    transform: translateY(70%);
+}
+
+.construct h1{
+    color: #004aad;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    width: 286px;
+}
+
+.construct .image{
+    width: 100px;
+    height: 100px;
+    background-image: url(./../icon/construct01.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover ;
+}
+
+/*----------*/
+
+.equipe{
+    display: none;
+}
 
 .equipe .team-ul{
     padding: 2rem;
@@ -43,7 +85,19 @@ nav .logo{
 .equipe .team-ul h3{
     color: #004aad;
 }
+
+.equipe .team-ul .members-ul{
+    width: fit-content;
+}
+
+.equipe .team-ul .departament-li{
+    width: 100%;
+}
  
+.equipe .team-ul .equipe-li{
+    width: 196px;
+}
+
 .equipe .team-ul .picture{
     width: 100px;
     height: 100px;
@@ -61,6 +115,7 @@ nav .logo{
 
 .equipe .team-ul .members-ul{
     display: inline-flex;
+    justify-content: center;
 }
 
 .equipe .team-ul .members-ul li{
@@ -80,12 +135,49 @@ footer{
     margin-top: 4rem;
 }
 
+footer .logo-mis-icone{
+    width: 150px;
+    height: 150px;
+    background-image: url(./../icon/icone_mis.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
 /*--------*/
 
 
-@media screen and (max-width: 968px){
+@media screen and (max-width: 768px){
 
+/*Construct*/
 
+.construct{
+    width: 100%;
+    height: 510px;
+
+}
+
+.construct ul{
+    display: inline-block;
+    transform: translateY(70%);
+}
+
+.construct h1{
+    color: #004aad;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+}
+
+.construct .image{
+    width: 100px;
+    height: 100px;
+    background-image: url(./../icon/construct01.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover ;
+}
+
+/*----------*/
 
 
 }
