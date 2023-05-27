@@ -1,0 +1,237 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Animations*/
+
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+/*---------*/
+
+/*Photo Modal*/
+
+.black-background {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a4;
+    animation: opacity .5s ease-in;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Centraliza verticalmente */
+    z-index: 2;
+  }
+  
+  .openned-photo {
+    margin-top: 2rem;
+    width: 60%;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.27); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.27);
+  }
+
+/*-------*/
+
+/* Header */
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #d52929;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.22); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.22);
+    position: fixed;
+    z-index: 1;
+}
+
+header .mis{
+    transform: translateY(1rem);
+    margin-left: 2rem;
+    width: 60px;
+    height: 60px;
+    background: center url(./../../icon/whitemis00354.png) no-repeat;
+    background-size: cover;
+}
+
+/*--------*/
+
+/*Nav*/
+
+nav{
+    transform: translateY(120px);
+    padding: 2rem;
+}
+
+nav ul{
+    display: inline-flex;
+    list-style: none;
+}
+
+nav ul li{
+    margin-left: 1rem;
+}
+
+nav ul .return{
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    border-color: #000;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    background-image: url(./../icons/return.png);
+    background-position: 40%, 45%;
+    background-repeat: no-repeat;
+    background-size: 40%;
+}
+
+@keyframes return {
+    0%{
+        background-position-x: 40%;
+    }
+
+    25%{
+        background-position-x: -40%;
+    }
+
+    50%{
+        background-position-x: 140%;
+    }
+
+    100%{
+        background-position-x: 40%;
+    }
+}
+
+nav ul .return:hover{
+    animation: return 1s ease;
+}
+
+nav ul li .album-name{
+    background-color: #d52929;
+    width: 100px;
+    padding: .5rem;
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+    user-select: none;
+    border-radius: 30px;
+}
+
+nav .year{
+    padding: .5rem;
+    user-select: none;
+    font-weight: bolder;  
+}
+
+/*----*/
+
+/* Photos Area */
+.photos-area{
+    transform: translateY(100px);
+    padding: 2rem;
+}
+
+.photos-area ul{
+    width: 100%;
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photos-area ul li{
+    margin: .5rem;
+}
+
+.photos-area .photo{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: #d52929;
+    background-image: url(./../icons/background_footer.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    margin-top: 8rem;
+}
+
+footer .logo-mis-icone{
+    width: 150px;
+    height: 150px;
+    background-image: url(./../icons/icone_mis.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+/*--------*/
+
+
+
+/* Celular */
+
+@media screen and (max-width: 768px){
+
+    /*Photo Modal*/
+
+    .black-background {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #000000a4;
+        animation: opacity .5s ease-in;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* Centraliza verticalmente */
+    }
+    
+    .openned-photo {
+        margin-top: 2rem;
+        width: 100%;
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.27); 
+        box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.27);
+    }
+
+    /*-------*/
+
+    /* Photos Area */
+
+    .photos-area{
+        transform: translateY(120px);
+        padding: .5rem;
+    }
+
+    .photos-area ul li{
+        margin: .5rem;
+    }
+
+    .photos-area .photo{
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}
